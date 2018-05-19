@@ -8,5 +8,9 @@ function deepestChild(){
   return document.querySelector('#grand-node div div div div');
 }
 function increaseRankBy(n){
-  return document.querySelectorAll('.ranked-list');
+ const lis = document.getElementById('app').querySelectorAll('ul.ranked-list li')
+ 
+  for (let i = 0; i < lis.length; i++) {
+    lis[i].innerHTML = (i + 1).toString()
+  }
 }
